@@ -1,0 +1,19 @@
+server:
+  port: 8085
+#服务消费者配置
+dubbo:
+  application:
+    name: server
+  registry:
+    address: zookeeper://30.225.9.20:2181
+    subscribe: true
+  metadata-report:
+    address: zookeeper://30.225.9.20:2181
+    retry-times: 30
+    cycle-report: false
+  scan:
+    base-packages: com.example.demo.controller
+  consumer:
+    timeout: 600000
+    check: false  # 服务启动时检查被调用服务是否可用
+    retries: 2    # 服务调用重试次数
