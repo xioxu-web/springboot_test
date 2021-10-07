@@ -11,8 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableDubbo
 public class ServerApplication extends SpringBootServletInitializer implements CommandLineRunner {
 	// 入口
-	public static void main(String[] args) {
-		SpringApplication.run(ServerApplication.class, args);
+	public static void main(String[] args) {SpringApplication.run(ServerApplication.class, args);
 	}
 	// Java EE应用服务器配置，
 	// 如果要使用tomcat来加载jsp的话就必须继承SpringBootServletInitializer类并且重写其中configure方法
